@@ -1,18 +1,18 @@
 let menus = [
     {
         id: 1,
-        name: '',
-        picture: './assets/',
+        name: 'Salade de crudités',
+        picture: './assets/salade.jpg',
         type: 'main',
         description: '',
-        price: '',
+        price: '5.99',
     },
     {
         id: 2,
-        name: '',
-        picture: '',
+        name: 'Pain de viande',
+        picture: './assets/Pain.jpg',
         description: '',
-        price: './assets/'
+        price: '4.99'
     },
     {
         id: 3,
