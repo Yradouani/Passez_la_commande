@@ -3,7 +3,7 @@ let menus = [
         id: 1,
         name: 'Salade de crudités',
         picture: './assets/salade.jpg',
-        type: 'main',
+        type: 'starter',
         description: '',
         price: '5.99',
     },
@@ -11,6 +11,7 @@ let menus = [
         id: 2,
         name: 'Pain de viande',
         picture: './assets/Pain.jpg',
+        type: 'starter',
         description: '',
         price: '4.99'
     },
@@ -18,6 +19,7 @@ let menus = [
         id: 3,
         name: '',
         picture: './assets/',
+        type: 'starter',
         description: '',
         price: ''
     },
