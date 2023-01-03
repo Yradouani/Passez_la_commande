@@ -1,0 +1,23 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+}
+
+#logo {
+    /* width: 10%; */
+    margin: 20px;
+}
+
+ul {
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+    font-size: 25px;
+}
