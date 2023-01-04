@@ -16,6 +16,11 @@ ul {
     align-items: center;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 li {
     list-style: none;
     cursor: pointer;

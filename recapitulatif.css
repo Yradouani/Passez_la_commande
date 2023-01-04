@@ -50,4 +50,25 @@ input[type="button"] {
     padding: 15px;
     cursor: pointer;
     font-size: 18px;
+    transition: all 0.2s ease-in-out;
+}
+
+.validate {
+    width: 100%;
+    text-align: center;
+}
+
+input[type="button"]:hover {
+    background: #ffbb3c;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+}
+
+footer span {
+    margin: 30px;
 }
