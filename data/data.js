@@ -1,4 +1,4 @@
-let menus = [
+export const menus = [
     {
         id: 1,
         name: 'Salade de crudités',
@@ -69,6 +69,6 @@ let menus = [
         picture: './assets/pancakes.jpg',
         type: 'dessert',
         description: 'Crêpes épaisses et moelleuses, cuites à la poêle, garnies de sucre, de beurre et de sirop d\'érable, recouvertes de framboises fraiches',
-        price: ''
+        price: '5.99'
     },
 ]
