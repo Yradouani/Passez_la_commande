@@ -1,18 +1,33 @@
 body {
     background: #E7A321;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 20px;
+    font-size: 19px;
+}
+
+#commande_page {
+    width: 100%;
+    background: white;
 }
 
 .recap_content {
-    border: 1px solid black;
     padding: 30px;
 }
 
+h1 {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+hr {
+    height: 3px;
+    background: rgb(222, 222, 222);
+    color: rgb(222, 222, 222);
+    border: none;
+}
+
 table {
-    margin: auto;
-    font-size: 19px;
+    margin: 30px auto;
+    width: 100%;
 }
 
 tr,
@@ -20,4 +35,19 @@ td,
 th {
     margin: 10px;
     padding: 10px;
+    text-align: start;
+}
+
+.contact {
+    margin: 15px 0;
+}
+
+input[type="button"] {
+    margin: 30px auto;
+    border: none;
+    background: #E7A321;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 18px;
 }
