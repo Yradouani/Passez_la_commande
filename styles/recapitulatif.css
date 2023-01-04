@@ -61,14 +61,3 @@ input[type="button"] {
 input[type="button"]:hover {
     background: #ffbb3c;
 }
-
-footer {
-    width: 100%;
-    display: flex;
-    padding: 20px;
-    justify-content: space-around;
-}
-
-footer span {
-    margin: 30px;
-}
