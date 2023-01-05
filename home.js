@@ -4,7 +4,12 @@ let drink = document.querySelector("#drink");
 let starter = document.querySelector("#starter");
 let main = document.querySelector("#main");
 let dessert = document.querySelector("#dessert");
-let orderDishesId = [];
+let orderDishesId;
+if (localStorage.getItem("orderDishes")) {
+    orderDishesId = JSON.parse(localStorage.getItem("orderDishes"))
+} else {
+    orderDishesId = [];
+}
 
 menus.forEach(menu => {
     if (menu.type === "drink") {
@@ -60,24 +65,45 @@ menus.forEach(menu => {
 })
 
 let orderButtons = document.querySelectorAll(".btnCommander");
-// orderButtons.addEventListener("click", order)
 
 function order() {
-    console.log(orderButtons)
     for (let i = 0; i < orderButtons.length; i++) {
         let dishesId = menus[i].id;
 
         orderButtons[i].addEventListener("click", () => {
-            orderDishesId.push({
-                id: dishesId,
-                quantity: 1
-            })
+            let DishesInLocalStorage = JSON.parse(localStorage.getItem("orderDishes"));
+            let isAlreadyInCart = false;
+            if (DishesInLocalStorage) {
+                console.log("Il y a déjà des articles dans le panier")
+                isAlreadyInCart = false;
+                for (let i = 0; i < DishesInLocalStorage.length; i++) {
+                    console.log(DishesInLocalStorage[i].id)
+                    if (DishesInLocalStorage[i].id === dishesId) {
+                        console.log("Je suis déjà dans le panier")
+                        orderDishesId[i].quantity += 1;
+                        isAlreadyInCart = true;
+                        break;
+                    }
+                }
+                if (isAlreadyInCart === false) {
+                    console.log("Je ne suis pas déjà dans le panier")
+                    orderDishesId.push({
+                        id: dishesId,
+                        quantity: 1
+                    })
+                }
+            } else {
+                console.log("Le panier est vide")
+                orderDishesId.push({
+                    id: dishesId,
+                    quantity: 1
+                })
+            }
+            localStorage.setItem("orderDishes", JSON.stringify(orderDishesId))
             console.log(orderDishesId)
         }
         )
     }
-
 }
-
 order()
 

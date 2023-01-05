@@ -61,3 +61,6 @@ input[type="button"] {
 input[type="button"]:hover {
     background: #ffbb3c;
 }
+.trash{
+cursor: pointer;
+}

@@ -1,7 +1,7 @@
 export const menus = [
     {
         id: 1,
-        name: 'jus d\'orange',
+        name: 'Jus d\'orange',
         picture: './assets/jus.jpeg',
         type: 'drink',
         isLiked: false,
@@ -11,7 +11,7 @@ export const menus = [
     },
     {
         id: 2,
-        name: 'smoothie',
+        name: 'Smoothie',
         picture: './assets/smoothie.jpg',
         type: 'drink',
         isLiked: false,
@@ -21,7 +21,7 @@ export const menus = [
     },
     {
         id: 3,
-        name: 'chocolat chaud',
+        name: 'Chocolat chaud',
         picture: './assets/chocolate.jpg',
         type: 'drink',
         isLiked: false,
