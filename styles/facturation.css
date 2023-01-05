@@ -4,9 +4,12 @@ body {
     padding: 20px;
     font-size: 19px;
 }
-nav{
+nav, footer{
     width: 100%;
     background: white;
+}
+table, td{
+    border: 1px solid gray;
 }
 .grey{
     background-color: gainsboro;
@@ -15,10 +18,38 @@ h3{
     color: rgb(241, 113, 45);
 }
 #facturation_page{
-    width: 100%;
+    padding: 6%;
     background: white;
-    padding: 2.5em 0em 0em 2.5em;
-}
-.name{
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.name, .display{
+    display: flex;
+    justify-content: space-around;
+}
+p{
+    padding: 1%;
+    font-size: small;
+    color: gray;
+    font-weight: bold;
+}
+.input{
+    width: 25em;
+    height: 2em;
+    margin: 1vw;
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+}
+#num{
+    background-color: white;
+    padding: 0.8%;
+}
+#carte_Payement{
+background-color: aliceblue;
+width: 25em;
+padding: 1%;
+margin-left: 2%;
 }

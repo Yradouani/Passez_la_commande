@@ -25,65 +25,86 @@
             </li>
         </ul>
     </nav>
-    
+
     <div id="facturation_page">
 
-
-
+        
         <h3>Détails de facturation</h3>
         <div class="name">
-            <p>Prénom*</p>
-            <input type="text" name="firstName" id="firstName">
-            <p>Nom*</p>
-            <input type="text" name="firstName" id="lastName">
-            <p>Notes de commande (facultatif)</p>
-            <textarea name="firstName" id="lastName"></textarea>
+            <div class="flex">
+                <p>Prénom*</p>
+                <input type="text" class="input" name="firstName" id="firstName">
+            </div>
+            <div class="flex">
+                <p>Nom*</p>
+                <input type="text" class="input" name="firstName" id="lastName">
+            </div>
+            <div class="flex">
+                <p>Notes de commande (facultatif)</p>
+                <textarea name="firstName" id="lastName"></textarea>
+            </div>
         </div>
         <p>Nom de l'entreprise (facultatif)</p>
-        <input type="text" name="businessName" id="businessName">
+        <input type="text" class="input" name="businessName" id="businessName">
         <p>Pays*</p>
-        <input type="text" name="country" id="country">
+        <input type="text" class="input" name="country" id="country">
         <p>Numéro et nom de rue*</p>
-        <input type="text" name="street" id="street" placeholder="Numéro de voie et nom de la rue">
-        <input type="text" name="apartment" id="apartment" placeholder="Appartement, bureau, ect. (optionnel)">
+        <input type="text" class="input" name="street" id="street" placeholder="Numéro de voie et nom de la rue">
+        <input type="text" class="input" name="apartment" id="apartment" placeholder="Appartement, bureau, ect. (optionnel)">
         <p>Code postal*</p>
-        <input type="text" name="postal" id="postal">
+        <input type="text" class="input" name="postal" id="postal">
         <p>Ville*</p>
-        <input type="text" name="city" id="city">
+        <input type="text" class="input" name="city" id="city">
         <p>Téléphone*</p>
-        <input type="text" name="tel" id="tel">
+        <input type="text" class="input" name="tel" id="tel">
         <p>Adresse de messagerie*</p>
-        <input type="text" name="tel" id="tel">
+        <input type="text" class="input" name="tel" id="tel">
+
         <h3>Votre commande</h3>
 
-        <table border="1">
-            <thead>
-                <tr>
-                    <th class="grey">PRODUIT</th>
-                    <th class="grey">SOUS-TOTAL</th>
-                </tr>
-            </thead>
+        <div class="display">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="grey">PRODUIT</th>
+                        <th class="grey">SOUS-TOTAL</th>
+                    </tr>
+                </thead>
 
-            <tbody>
-                <tr>
-                    <td id="productName">$nomProduit</td>           
-                    <td id="price">$prix + "€"</td>           
-                </tr>
-                <tr>
-                    <td class="grey">SOUS-TOTAL</td>           
-                    <td id="sum">$somme de tous les $prix + "€"</td>           
-                </tr>
-                <tr>
-                    <td class="grey">EXPÉDITION</td>           
-                    <td id="sum">Saisissez votre adresse pour voir les options de livraison. + $prix de livraison</td>           
-                </tr>
-                <tr>
-                    <td class="grey">TOTAL</td>           
-                    <td id="sum">$somme de tous les $prix + $prix de livraison + "€"</td>           
-                </tr>
-            </tbody>
-        </table>
+                <tbody>
+                    <tr>
+                        <td id="productName">$nomProduit</td>           
+                        <td id="price">$prix + "€"</td>           
+                    </tr>
+                    <tr>
+                        <td class="grey">SOUS-TOTAL</td>           
+                        <td id="sum">$somme de tous les $prix + "€"</td>           
+                    </tr>
+                    <tr>
+                        <td class="grey">EXPÉDITION</td>           
+                        <td id="sum">Saisissez votre adresse pour voir les options de livraison. + $prix de livraison</td>           
+                    </tr>
+                    <tr>
+                        <td class="grey">TOTAL</td>           
+                        <td id="sum">$somme de tous les $prix + $prix de livraison + "€"</td>           
+                    </tr>
+                </tbody>
+            </table>
+
+            <div id="carte_Payement">
+                <p>Carte de payement</p>
+                <div id="num">
+                    <p>Payez avec votre carte bancaire.</p>
+                    <p>Carte de crédit ou de débit</p>
+                    <input type="text" class="input" name="carte" id="carte" placeholder="Numéro de carte                              MM / AA CVC   ">
+                </div>
+                <p>Vos informations personnelles peuvent être utilisées pour faire cette commande, pour améliorer votre expérience à travers ce site, et pour d'autre fonctionalitées décritent dans notre politique de confidentialité.</p>
+                <button>COMMANDER</button>
+            </div>
+        </div>
+
     </div>
+
     <footer>
         <span>
             <a href="mailto:delice@gmail.com">Nous contacter par mail</a>
