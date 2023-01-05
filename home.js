@@ -4,6 +4,7 @@ let drink = document.querySelector("#drink");
 let starter = document.querySelector("#starter");
 let main = document.querySelector("#main");
 let dessert = document.querySelector("#dessert");
+let orderDishesId = [];
 
 menus.forEach(menu => {
     if (menu.type === "drink") {
@@ -18,7 +19,7 @@ menus.forEach(menu => {
             </div>
         </div> 
         `
-    } else if (menu.type === "starter"){
+    } else if (menu.type === "starter") {
         starter.innerHTML += `
         <div class="fich">
             <img src=${menu.picture} class="img" alt=${menu.name}>
@@ -30,7 +31,7 @@ menus.forEach(menu => {
             </div>
         </div> 
         `
-    } else if (menu.type === "main"){
+    } else if (menu.type === "main") {
         main.innerHTML += `
         <div class="fich">
             <img src=${menu.picture} class="img" alt=${menu.name}>
@@ -55,5 +56,28 @@ menus.forEach(menu => {
         </div> 
         `
     }
+
 })
+
+let orderButtons = document.querySelectorAll(".btnCommander");
+// orderButtons.addEventListener("click", order)
+
+function order() {
+    console.log(orderButtons)
+    for (let i = 0; i < orderButtons.length; i++) {
+        let dishesId = menus[i].id;
+
+        orderButtons[i].addEventListener("click", () => {
+            orderDishesId.push({
+                id: dishesId,
+                quantity: 1
+            })
+            console.log(orderDishesId)
+        }
+        )
+    }
+
+}
+
+order()
 
