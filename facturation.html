@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/facturation.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <nav>
+        <img src="./assets/logo.png" alt="logo" id="logo">
+        <ul>
+            <li>
+                <a href="./index.html">Accueil</a>
+            </li>
+            <li>
+                <a href="./recapitulatif.html">Ma commande</a>
+            </li>
+            <li>
+                <a href="./contact.html">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    
+    <div id="facturation_page">
+
+
+
+        <h3>Détails de facturation</h3>
+        <div class="name">
+            <p>Prénom*</p>
+            <input type="text" name="firstName" id="firstName">
+            <p>Nom*</p>
+            <input type="text" name="firstName" id="lastName">
+            <p>Notes de commande (facultatif)</p>
+            <textarea name="firstName" id="lastName"></textarea>
+        </div>
+        <p>Nom de l'entreprise (facultatif)</p>
+        <input type="text" name="businessName" id="businessName">
+        <p>Pays*</p>
+        <input type="text" name="country" id="country">
+        <p>Numéro et nom de rue*</p>
+        <input type="text" name="street" id="street" placeholder="Numéro de voie et nom de la rue">
+        <input type="text" name="apartment" id="apartment" placeholder="Appartement, bureau, ect. (optionnel)">
+        <p>Code postal*</p>
+        <input type="text" name="postal" id="postal">
+        <p>Ville*</p>
+        <input type="text" name="city" id="city">
+        <p>Téléphone*</p>
+        <input type="text" name="tel" id="tel">
+        <p>Adresse de messagerie*</p>
+        <input type="text" name="tel" id="tel">
+        <h3>Votre commande</h3>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th class="grey">PRODUIT</th>
+                    <th class="grey">SOUS-TOTAL</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td id="productName">$nomProduit</td>           
+                    <td id="price">$prix + "€"</td>           
+                </tr>
+                <tr>
+                    <td class="grey">SOUS-TOTAL</td>           
+                    <td id="sum">$somme de tous les $prix + "€"</td>           
+                </tr>
+                <tr>
+                    <td class="grey">EXPÉDITION</td>           
+                    <td id="sum">Saisissez votre adresse pour voir les options de livraison. + $prix de livraison</td>           
+                </tr>
+                <tr>
+                    <td class="grey">TOTAL</td>           
+                    <td id="sum">$somme de tous les $prix + $prix de livraison + "€"</td>           
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <footer>
+        <span>
+            <a href="mailto:delice@gmail.com">Nous contacter par mail</a>
+        </span>
+        <span>Copyright © workteam</span>
+        <span>07 54 76 34 21</span>
+    </footer>
+</body>
+</html>
