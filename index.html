@@ -5,11 +5,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/footer.css">
     <title>Passez la commande</title>
 </head>
 
 <body>
+    <div id="home_page">
+        <nav>
+            <img src="./assets/logo.png" alt="logo" id="logo">
+            <ul>
+                <li>
+                    <a href="./index.html">Accueil</a>
+                </li>
+                <li>
+                    <a href="./recapitulatif.html">Ma commande</a>
+                </li>
+                <li>
+                    <a href="./contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
 
+        <section id="dishes">
+            <h2>Nos Best Seller</h2>
+            <div id="best_seller"></div>
+
+            <h2>Nos boissons</h2>
+            <div id="drink">
+            </div>
+
+            <h2>Nos entrées</h2>
+            <div id="starter">
+            </div>
+
+            <h2>Nos plats de résistance</h2>
+            <div id="main">
+            </div>
+
+            <h2>Nos desserts</h2>
+            <div id="dessert">
+            </div>
+
+        </section>
+        <footer>
+            <span>
+                <a href="mailto:delice@gmail.com">Nous contacter par mail</a>
+            </span>
+            <span>Copyright © workteam</span>
+            <span>07 54 76 34 21</span>
+        </footer>
+    </div>
+    <script src="./home.js" type="module"></script>
 </body>
 
 </html>
