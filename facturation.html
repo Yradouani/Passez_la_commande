@@ -28,37 +28,37 @@
 
     <div id="facturation_page">
 
-        
+
         <h3>Détails de facturation</h3>
         <div class="name">
             <div class="flex">
-                <p>Prénom*</p>
+                <p>Nom<span style="color:red">*</span></p>
+                <input type="text" class="input" name="lastName" id="lastName">
+            </div>
+            <div class="flex">
+                <p>Prénom<span style="color:red">*</span></p>
                 <input type="text" class="input" name="firstName" id="firstName">
             </div>
             <div class="flex">
-                <p>Nom*</p>
-                <input type="text" class="input" name="firstName" id="lastName">
-            </div>
-            <div class="flex">
                 <p>Notes de commande (facultatif)</p>
-                <textarea name="firstName" id="lastName"></textarea>
+                <textarea name="firstName" id="comment" placeholder="Commentaires concernant votre commande."></textarea>
             </div>
         </div>
         <p>Nom de l'entreprise (facultatif)</p>
         <input type="text" class="input" name="businessName" id="businessName">
-        <p>Pays*</p>
+        <p>Pays<span style="color:red">*</span></p>
         <input type="text" class="input" name="country" id="country">
-        <p>Numéro et nom de rue*</p>
+        <p>Numéro et nom de rue<span style="color:red">*</span></p>
         <input type="text" class="input" name="street" id="street" placeholder="Numéro de voie et nom de la rue">
         <input type="text" class="input" name="apartment" id="apartment" placeholder="Appartement, bureau, ect. (optionnel)">
-        <p>Code postal*</p>
+        <p>Code postal<span style="color:red">*</span></p>
         <input type="text" class="input" name="postal" id="postal">
-        <p>Ville*</p>
+        <p>Ville<span style="color:red">*</span></p>
         <input type="text" class="input" name="city" id="city">
-        <p>Téléphone*</p>
+        <p>Téléphone<span style="color:red">*</span></p>
         <input type="text" class="input" name="tel" id="tel">
-        <p>Adresse de messagerie*</p>
-        <input type="text" class="input" name="tel" id="tel">
+        <p>Adresse de messagerie<span style="color:red">*</span></p>
+        <input type="text" class="input" name="tel" id="mesage">
 
         <h3>Votre commande</h3>
 
@@ -82,7 +82,7 @@
                     </tr>
                     <tr>
                         <td class="grey">EXPÉDITION</td>           
-                        <td id="sum">Saisissez votre adresse pour voir les options de livraison. + $prix de livraison</td>           
+                        <td id="sum">Adresse de livraison. + $prix de livraison</td>           
                     </tr>
                     <tr>
                         <td class="grey">TOTAL</td>           
@@ -98,7 +98,7 @@
                     <p>Carte de crédit ou de débit</p>
                     <input type="text" class="input" name="carte" id="carte" placeholder="Numéro de carte                              MM / AA CVC   ">
                 </div>
-                <p>Vos informations personnelles peuvent être utilisées pour faire cette commande, pour améliorer votre expérience à travers ce site, et pour d'autre fonctionalitées décritent dans notre politique de confidentialité.</p>
+                <p>Vos informations personnelles peuvent être utilisées pour faire cette commande, pour améliorer votre expérience à travers ce site, et pour d'autre fonctionalitées décritent dans notre <span style="color:red"> politique de confidentialité.</span> </p>
                 <button>COMMANDER</button>
             </div>
         </div>
@@ -112,5 +112,6 @@
         <span>Copyright © workteam</span>
         <span>07 54 76 34 21</span>
     </footer>
+    <script src="./facturation.js"></script>
 </body>
 </html>
