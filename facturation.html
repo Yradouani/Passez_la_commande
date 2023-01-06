@@ -48,17 +48,16 @@
         <input type="text" class="input" name="businessName" id="businessName">
         <p>Pays<span style="color:red">*</span></p>
         <input type="text" class="input" name="country" id="country">
-        <p>Numéro et nom de rue<span style="color:red">*</span></p>
-        <input type="text" class="input" name="street" id="street" placeholder="Numéro de voie et nom de la rue">
-        <input type="text" class="input" name="apartment" id="apartment" placeholder="Appartement, bureau, ect. (optionnel)">
+        <p>Adresse<span style="color:red">*</span></p>
+        <input type="text" class="input" name="address" id="address">
         <p>Code postal<span style="color:red">*</span></p>
         <input type="text" class="input" name="postal" id="postal">
         <p>Ville<span style="color:red">*</span></p>
         <input type="text" class="input" name="city" id="city">
         <p>Téléphone<span style="color:red">*</span></p>
         <input type="text" class="input" name="tel" id="tel">
-        <p>Adresse de messagerie<span style="color:red">*</span></p>
-        <input type="text" class="input" name="tel" id="mesage">
+        <p>Adresse mail<span style="color:red">*</span></p>
+        <input type="text" class="input" name="mail" id="mail">
 
         <h3>Votre commande</h3>
 
@@ -78,28 +77,36 @@
                     </tr>
                     <tr>
                         <td class="grey">SOUS-TOTAL</td>           
-                        <td id="sum">$somme de tous les $prix + "€"</td>           
+                        <td id="sousTotal">$somme de tous les $prix + "€"</td>           
                     </tr>
                     <tr>
                         <td class="grey">EXPÉDITION</td>           
-                        <td id="sum">Adresse de livraison. + $prix de livraison</td>           
+                        <td id="livraison">Adresse de livraison. + $prix de livraison</td>           
                     </tr>
                     <tr>
                         <td class="grey">TOTAL</td>           
-                        <td id="sum">$somme de tous les $prix + $prix de livraison + "€"</td>           
+                        <td id="total">$somme de tous les $prix + $prix de livraison + "€"</td>           
                     </tr>
                 </tbody>
             </table>
 
             <div id="carte_Payement">
-                <p>Carte de payement</p>
+                <h5>Carte de payement</h5>
+                <input type="radio" name="visa" id="visa">
+                <label for="visa"> <img src="./assets/visa.jpg" class="card" alt=""></label>
+
+                <input type="radio" name="master" id="master">
+                <label for="masterCard"> <img src="./assets/Master.jpg" class="card" alt=""></label>
+
+                <input type="radio" name="paypal" id="paypal">
+                <label for="paypal"> <img src="./assets/paypal.jpg" class="card" alt=""></label>
+
                 <div id="num">
                     <p>Payez avec votre carte bancaire.</p>
-                    <p>Carte de crédit ou de débit</p>
                     <input type="text" class="input" name="carte" id="carte" placeholder="Numéro de carte                              MM / AA CVC   ">
                 </div>
                 <p>Vos informations personnelles peuvent être utilisées pour faire cette commande, pour améliorer votre expérience à travers ce site, et pour d'autre fonctionalitées décritent dans notre <span style="color:red"> politique de confidentialité.</span> </p>
-                <button>COMMANDER</button>
+                <button class="commander">COMMANDER</button>
             </div>
         </div>
 

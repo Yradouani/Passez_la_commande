@@ -16,4 +16,11 @@ let postal = document.querySelector("#postal");
 let city = document.querySelector("#city");
  /* Numéro de téléphone */
 let tel = document.querySelector("#tel");
+ /* Adresse mail */
+let mail = document.querySelector("#mail");
 
+ /* La commande */
+ let productName = document.querySelector("#productName");
+ let sousTotal = document.querySelector("#sousTotal");
+ let livraison = document.querySelector("#livraison");
+ let total = document.querySelector("#total");
