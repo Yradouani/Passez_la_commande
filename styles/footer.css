@@ -3,6 +3,9 @@ footer {
     display: flex;
     padding: 20px;
     justify-content: space-around;
+    background-image: url("../assets/bg_header.jpg");
+    color: white;
+    margin-top: 70px;
 }
 
 footer span {

@@ -15,6 +15,7 @@ menus.forEach(menu => {
     if (menu.type === "drink") {
         drink.innerHTML += `
         <div class="fich">
+            <i class="fa-regular fa-heart heart"></i>
             <img src=${menu.picture} class="img" alt=${menu.name}>
             <h3 class="title">${menu.name}</h3>
             <p class="description">${menu.description}</p>
@@ -27,6 +28,7 @@ menus.forEach(menu => {
     } else if (menu.type === "starter") {
         starter.innerHTML += `
         <div class="fich">
+            <i class="fa-regular fa-heart heart"></i>
             <img src=${menu.picture} class="img" alt=${menu.name}>
             <h3 class="title">${menu.name}</h3>
             <p class="description">${menu.description}</p>
@@ -39,6 +41,7 @@ menus.forEach(menu => {
     } else if (menu.type === "main") {
         main.innerHTML += `
         <div class="fich">
+            <i class="fa-regular fa-heart heart"></i>
             <img src=${menu.picture} class="img" alt=${menu.name}>
             <h3 class="title">${menu.name}</h3>
             <p class="description">${menu.description}</p>
@@ -51,6 +54,7 @@ menus.forEach(menu => {
     } else {
         dessert.innerHTML += `
         <div class="fich">
+            <i class="fa-regular fa-heart heart"></i>
             <img src=${menu.picture} class="img" alt=${menu.name}>
             <h3 class="title">${menu.name}</h3>
             <p class="description">${menu.description}</p>
