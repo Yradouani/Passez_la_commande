@@ -10,7 +10,6 @@
     <title>Document</title>
 </head>
 <body>
-
     <nav>
         <img src="./assets/logo.png" alt="logo" id="logo">
         <ul>
@@ -25,6 +24,8 @@
             </li>
         </ul>
     </nav>
+
+    <div id="error"></div>
 
     <div id="facturation_page">
 
@@ -101,12 +102,19 @@
                 <input type="radio" name="paypal" id="paypal">
                 <label for="paypal"> <img src="./assets/paypal.jpg" class="card" alt=""></label>
 
+                <div>
+                    <label>Niveau :</label>
+                    <input type="radio" name="r" checked value="1" checked> Secondaire 
+                    <input type="radio" name="r" value="2">Universitaire
+                    <input type="radio" name="r" value="3"> Autre
+                </div>
+                
                 <div id="num">
                     <p>Payez avec votre carte bancaire.</p>
                     <input type="text" class="input" name="carte" id="carte" placeholder="Numéro de carte                              MM / AA CVC   ">
                 </div>
                 <p>Vos informations personnelles peuvent être utilisées pour faire cette commande, pour améliorer votre expérience à travers ce site, et pour d'autre fonctionalitées décritent dans notre <span style="color:red"> politique de confidentialité.</span> </p>
-                <button class="commander">COMMANDER</button>
+                <button id="payer">Payer</button>
             </div>
         </div>
 

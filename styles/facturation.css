@@ -56,7 +56,7 @@ td{
     border: 1px solid gray;
     border-radius: 0.2em;
 }
-.commander{
+#payer{
     border: none;
     background-color: rgb(213, 25, 25);
     color: white;
