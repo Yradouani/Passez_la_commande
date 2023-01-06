@@ -56,15 +56,35 @@ td{
     border: 1px solid gray;
     border-radius: 0.2em;
 }
+th, td{
+    font-size:small;
+    justify-content: center;
+}
 #payer{
     border: none;
-    background-color: rgb(213, 25, 25);
+    background-color: rgb(203, 35, 35);
     color: white;
-    border-radius: 0.2em;
-    display: flex;
-    justify-content: space-around;
+    border-radius: 0.8em;
+    margin-left: 38%;
+    padding: 2%;
+    width: 20%;
+}
+#payer:hover{
+    scale: 1.05;
+    background-color: rgb(238, 44, 44);
 }
 .card{
     width: 12%;
+    margin: 2% 4.5%;
+}
+.radio{
     margin: 2%;
+}
+/*Vérification*/
+
+#error {
+    color: red;
+    border: 1px solid red;
+    padding-left: 10px;
+    display: none;
 }

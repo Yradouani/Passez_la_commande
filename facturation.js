@@ -21,8 +21,6 @@ let tel = document.querySelector("#tel").value;
  /* Adresse mail */
 let mail = document.querySelector("#mail").value;
 
-let payer = document.querySelector("#payer");
-
 
  /* La commande */
  let productName = document.querySelector("#productName");
@@ -32,12 +30,26 @@ let payer = document.querySelector("#payer");
 
 
 
+let payer = document.querySelector("#payer");
+let err = document.querySelector("#error");
+let erreur = "";
 
-function verif()
-{ 
+
+/* Vérif tel*/ 
+function verif_tel(tel) {
+    let taille = tel.length;
+    for(let i=0; i<taille; ++i) {
+        if ((tel.charAt(i) < "0") || (tel.charAt(i) > "9") || (taille!=10)){
+            erreur += '<p>Veuillez taper votre numéro de téléphone</p>';
+            err.style.display = "block"; 
+        }
+    }
+}
+
+
+function verif(){ 
+
     let valid = true;
-    let err = document.getElementById('error');
-    let erreur = "";
 
  /* Vérif  firstname */
 
@@ -75,4 +87,4 @@ function verif()
 
 
 
-payer.addEventListener("onclick", => function verif())
+payer.addEventListener("onclick", verif());
