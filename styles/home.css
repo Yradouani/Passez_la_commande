@@ -3,6 +3,18 @@ body {
     font-size: 19px;
 }
 
+#bg {
+    width: 100%;
+}
+
+.btnCommander {
+    display: none;
+}
+
+nav {
+    background: transparent !important;
+}
+
 header {
     position: absolute;
     top: 0;
@@ -139,9 +151,29 @@ h3 {
     font-size: 15px;
 }
 
-.flex {
+.flex_content {
     display: flex;
     justify-content: space-around;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.flex i {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.quantity {
+    margin: 15px;
+    font-weight: bold;
+}
+
+.btnCommander {
+    height: 100%;
 }
 
 .title {

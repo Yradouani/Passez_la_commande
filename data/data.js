@@ -6,7 +6,7 @@ export const menus = [
         type: 'drink',
         isLiked: false,
         isBestSeller: false,
-        description: 'Jus d’orange pressé fait maison avec des oranges espagnoles, bios et juteuses.',
+        description: 'Jus d’orange pressé fait maison avec des oranges espagnoles, bio et juteuses.',
         price: '3.99'
     },
     {
