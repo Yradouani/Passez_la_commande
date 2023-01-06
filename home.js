@@ -22,6 +22,9 @@ menus.forEach(menu => {
             <p class="price">${menu.price}€</p>
             <div class="flex">
                 <button class="btnCommander" name="btnCommander">Ajouter au panier</button>
+                <span class="compteur"><i class="fa-solid fa-minus minus"></i><span class="quantity"> 
+                    
+                </span><i class="fa-solid fa-plus plus"></i></span>
             </div>
         </div>
     </div> 
@@ -39,6 +42,7 @@ menus.forEach(menu => {
 })
 
 let orderButtons = document.querySelectorAll(".btnCommander");
+let compteur = document.querySelectorAll(".compteur");
 
 function order() {
     for (let i = 0; i < orderButtons.length; i++) {
@@ -84,6 +88,8 @@ function order() {
     }
 }
 
+let dishesQuantity = document.querySelectorAll(".quantity")
+
 function quantity(i) {
     let btnCards = document.querySelectorAll(".flex");
     let isAlreadyInCart = false;
@@ -98,7 +104,9 @@ function quantity(i) {
                 </span><i class="fa-solid fa-plus plus"></i></td>
                 `
             console.log(orderButtons[i]);
-            updateQuantity()
+            // updateQuantity()
+            // compteur[i].style.display = "block";
+            // dishesQuantity[i].innerText = `${orderDishesId[k].quantity} `
             isAlreadyInCart = true;
         }
     }
@@ -108,23 +116,25 @@ function quantity(i) {
 }
 
 function updateQuantity() {
-    let dishesQuantity = document.querySelectorAll(".quantity")
     let plusButtons = document.querySelectorAll(".plus");
     let minusButtons = document.querySelectorAll(".minus");
+    let dishesQuantity = document.querySelectorAll(".quantity")
 
+    console.log(plusButtons)
+    console.log(minusButtons)
     for (let i = 0; i < plusButtons.length; i++) {
         let dishesId = menus[i].id;
 
         plusButtons[i].addEventListener("click", () => {
             for (let j = 0; j < orderDishesId.length; j++) {
-                let quantity = orderDishesId[i].quantity;
+                let quantity = orderDishesId[j].quantity;
+                console.log(quantity)
+
+                console.log(dishesId)
                 if (orderDishesId[j].id === dishesId) {
-                    orderDishesId[i].quantity += 1;
+                    orderDishesId[j].quantity += 1;
                     localStorage.setItem("orderDishes", JSON.stringify(orderDishesId))
-                    dishesQuantity[i].innerHTML = (quantity)
-                    totalPriceOfOneDishe = parseInt(orderDishesId[i].quantity) * parseFloat(menus[i].price)
-                    totalPriceOfOneDishe = Math.round(totalPriceOfOneDishe * 100) / 100
-                    totalPrice[i].innerHTML = `${totalPriceOfOneDishe}€`
+                    dishesQuantity[i].innerHTML = (quantity + 1)
                 }
             }
         })
@@ -135,14 +145,12 @@ function updateQuantity() {
 
         minusButtons[i].addEventListener("click", () => {
             for (let j = 0; j < orderDishesId.length; j++) {
-                let quantity = orderDishesId[i].quantity;
-                if (orderDishesId[j].id === dishesId && orderDishesId[i].quantity > 1) {
-                    orderDishesId[i].quantity -= 1;
+                let quantity = orderDishesId[j].quantity;
+
+                if (orderDishesId[j].id === dishesId && quantity > 1) {
+                    orderDishesId[j].quantity -= 1;
                     localStorage.setItem("orderDishes", JSON.stringify(orderDishesId))
-                    dishesQuantity[i].innerHTML = (quantity)
-                    totalPriceOfOneDishe = parseInt(orderDishesId[i].quantity) * parseFloat(menus[i].price)
-                    totalPriceOfOneDishe = Math.round(totalPriceOfOneDishe * 100) / 100
-                    totalPrice[i].innerHTML = `${totalPriceOfOneDishe}€`
+                    dishesQuantity[i].innerHTML = (quantity - 1)
                 }
             }
         })
