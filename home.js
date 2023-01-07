@@ -5,6 +5,8 @@ let starter = document.querySelector("#starter");
 let main = document.querySelector("#main");
 let dessert = document.querySelector("#dessert");
 let orderDishesId;
+let isAlreadyPushInCart = true;
+let hasCalledUpdateQuantity = false;
 if (localStorage.getItem("orderDishes")) {
     orderDishesId = JSON.parse(localStorage.getItem("orderDishes"))
 } else {
@@ -51,29 +53,29 @@ function order() {
 
         if (orderButtons[i]) {
             orderButtons[i].addEventListener("click", () => {
+
                 let DishesInLocalStorage = JSON.parse(localStorage.getItem("orderDishes"));
                 let isAlreadyInCart = false;
                 if (DishesInLocalStorage) {
                     console.log("Il y a déjà des articles dans le panier")
                     isAlreadyInCart = false;
-                    for (let i = 0; i < DishesInLocalStorage.length; i++) {
-                        console.log(DishesInLocalStorage[i].id)
-                        if (DishesInLocalStorage[i].id === dishesId) {
+                    for (let j = 0; j < DishesInLocalStorage.length; j++) {
+                        if (DishesInLocalStorage[j].id === dishesId) {
                             console.log("Je suis déjà dans le panier")
-                            orderDishesId[i].quantity += 1;
+                            orderDishesId[j].quantity += 1;
                             isAlreadyInCart = true;
                             break;
                         }
                     }
-                    if (isAlreadyInCart === false) {
+                    if (!isAlreadyInCart) {
                         console.log("Je ne suis pas déjà dans le panier")
                         orderDishesId.push({
                             id: dishesId,
                             quantity: 1
                         })
+                        hasCalledUpdateQuantity = false;
                     }
                 } else {
-                    console.log("Le panier est vide")
                     orderDishesId.push({
                         id: dishesId,
                         quantity: 1
@@ -81,7 +83,6 @@ function order() {
                 }
                 quantity(i)
                 localStorage.setItem("orderDishes", JSON.stringify(orderDishesId))
-                console.log(orderDishesId)
             }
             )
         }
@@ -93,7 +94,7 @@ let dishesQuantity = document.querySelectorAll(".quantity")
 function quantity(i) {
     let btnCards = document.querySelectorAll(".flex");
     let isAlreadyInCart = false;
-
+    // hasCalledUpdateQuantity = false;
     for (let k = 0; k < orderDishesId.length; k++) {
         isAlreadyInCart = false;
         if (orderDishesId[k].id === menus[i].id) {
@@ -103,11 +104,13 @@ function quantity(i) {
                     ${orderDishesId[k].quantity} 
                 </span><i class="fa-solid fa-plus plus"></i></td>
                 `
-            console.log(orderButtons[i]);
-            // updateQuantity()
-            // compteur[i].style.display = "block";
-            // dishesQuantity[i].innerText = `${orderDishesId[k].quantity} `
-            isAlreadyInCart = true;
+
+            if (hasCalledUpdateQuantity) {
+                return;
+            }
+            updateQuantity()
+            hasCalledUpdateQuantity = true
+        } else {
         }
     }
     if (!isAlreadyInCart) {
@@ -120,17 +123,13 @@ function updateQuantity() {
     let minusButtons = document.querySelectorAll(".minus");
     let dishesQuantity = document.querySelectorAll(".quantity")
 
-    console.log(plusButtons)
-    console.log(minusButtons)
     for (let i = 0; i < plusButtons.length; i++) {
         let dishesId = menus[i].id;
 
         plusButtons[i].addEventListener("click", () => {
             for (let j = 0; j < orderDishesId.length; j++) {
                 let quantity = orderDishesId[j].quantity;
-                console.log(quantity)
 
-                console.log(dishesId)
                 if (orderDishesId[j].id === dishesId) {
                     orderDishesId[j].quantity += 1;
                     localStorage.setItem("orderDishes", JSON.stringify(orderDishesId))
@@ -142,6 +141,7 @@ function updateQuantity() {
 
     for (let i = 0; i < minusButtons.length; i++) {
         let dishesId = menus[i].id;
+        let btnCards = document.querySelectorAll(".flex");
 
         minusButtons[i].addEventListener("click", () => {
             for (let j = 0; j < orderDishesId.length; j++) {
@@ -151,11 +151,22 @@ function updateQuantity() {
                     orderDishesId[j].quantity -= 1;
                     localStorage.setItem("orderDishes", JSON.stringify(orderDishesId))
                     dishesQuantity[i].innerHTML = (quantity - 1)
+                } else if (orderDishesId[j].id === dishesId && quantity == 1) {
+                    console.log("je veux enlever cet élément du tableau")
+                    orderDishesId.splice(j, j)
+                    localStorage.setItem("orderDishes", JSON.stringify(orderDishesId))
+                    // orderButtons[i].style.display = "block";
+                    // btnCards[i].innerHTML = `<button class="btnCommander" name="btnCommander">Ajouter au panier</button>
+                    // `
+                    // btnCards[i].style.setProperty("display", "block");
                 }
             }
         })
     }
+    isAlreadyPushInCart = true;
 }
 order()
 updateQuantity()
+
+
 
