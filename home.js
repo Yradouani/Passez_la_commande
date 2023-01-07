@@ -153,7 +153,7 @@ function updateQuantity() {
                     dishesQuantity[i].innerHTML = (quantity - 1)
                 } else if (orderDishesId[j].id === dishesId && quantity == 1) {
                     console.log("je veux enlever cet élément du tableau")
-                    orderDishesId.splice(j, j)
+                    orderDishesId.splice(j, 1)
                     localStorage.setItem("orderDishes", JSON.stringify(orderDishesId))
                     // orderButtons[i].style.display = "block";
                     // btnCards[i].innerHTML = `<button class="btnCommander" name="btnCommander">Ajouter au panier</button>

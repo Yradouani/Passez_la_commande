@@ -15,6 +15,12 @@ nav {
     background: transparent !important;
 }
 
+.bar {
+    font-size: 40px;
+    margin-right: 40px;
+    display: none;
+}
+
 header {
     position: absolute;
     top: 0;
@@ -28,7 +34,7 @@ header {
 }
 
 #header_text_content {
-    margin: 150px 0 0 550px;
+    margin: 150px 20px 0 550px;
     flex-direction: column;
     display: flex;
     align-items: center;
@@ -188,4 +194,120 @@ h3 {
     display: flex;
     justify-content: space-around;
     margin: 20px;
+}
+
+@media (max-width: 1230px) {
+    #header_text_content {
+        margin: 100px 20px 0 500px;
+    }
+
+    .fich {
+        width: 45%;
+    }
+}
+
+@media (max-width: 1151px) {
+    nav ul {
+        display: none;
+    }
+
+    nav .bar {
+        display: flex;
+        align-items: center;
+    }
+
+
+}
+
+@media (max-width: 1102px) {
+    #header_text_content {
+        margin: 0px 20px 0 500px;
+    }
+
+    #drink,
+    #starter,
+    #main,
+    #dessert {
+        flex-wrap: wrap;
+    }
+
+    .fich {
+        width: 40%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 1050px) {
+    #header_text_content {
+        margin: 0px 20px 0 450px;
+    }
+
+    #header_text_content p {
+        font-size: 26px;
+    }
+
+    .description {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 950px) {
+    .fich {
+        width: 45%;
+    }
+}
+
+@media (max-width: 890px) {
+    #header_text_content {
+        margin: 30px 20px 0 400px;
+    }
+
+    #header_text_content p {
+        font-size: 25px;
+    }
+
+}
+
+@media (max-width: 845px) {
+    #header_text_content {
+        margin: 10px 20px 0 370px;
+    }
+
+    #header_text_content p {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 830px) {
+    #header_text_content {
+        margin: 0px 20px 0 370px;
+    }
+}
+
+@media (max-width: 799px) {
+    .fich {
+        width: 60%;
+    }
+
+    #header_text_content p {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 700px) {
+    .fich {
+        width: 70%;
+    }
+}
+
+@media (max-width: 600px) {
+    .fich {
+        width: 80%;
+    }
+}
+
+@media (max-width: 500px) {
+    .fich {
+        width: 90%;
+    }
 }
