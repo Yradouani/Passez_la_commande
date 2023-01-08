@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/facturation.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <!-- <img src="./assets/logo.png" alt="logo" id="logo"> -->
+        <h1>Les Délices</h1>
+        <ul>
+            <li>
+                <a href="./index.html">Accueil</a>
+            </li>
+            <li>
+                <a href="./recapitulatif.html">Ma commande</a>
+            </li>
+            <li>
+                <a href="./contact.html">Contact</a>
+            </li>
+        </ul>
+        <i class="fa-solid fa-bars bar"></i>
+    </nav>
+
+    <div id="error"></div>
+
+    <div id="facturation_page">
+
+
+        <h3>Détails de facturation</h3>
+        <div class="name">
+            <div class="flex">
+                <p>Nom<span style="color:red">*</span></p>
+                <input type="text" class="input" name="lastName" id="lastName">
+            </div>
+            <div class="flex">
+                <p>Prénom<span style="color:red">*</span></p>
+                <input type="text" class="input" name="firstName" id="firstName">
+            </div>
+            <div class="flex">
+                <p>Notes de commande (facultatif)</p>
+                <textarea name="firstName" id="comment" placeholder="Commentaires concernant votre commande."></textarea>
+            </div>
+        </div>
+        <p>Nom de l'entreprise (facultatif)</p>
+        <input type="text" class="input" name="businessName" id="businessName">
+        <p>Pays<span style="color:red">*</span></p>
+        <input type="text" class="input" name="country" id="country">
+        <p>Ville<span style="color:red">*</span></p>
+        <input type="text" class="input" name="city" id="city">
+        <p>Adresse<span style="color:red">*</span></p>
+        <input type="text" class="input" name="address" id="address">
+        <p>Code postal<span style="color:red">*</span></p>
+        <input type="text" class="input" name="postal" id="postal">
+        <p>Téléphone<span style="color:red">*</span></p>
+        <input type="text" class="input" name="tel" id="tel">
+        <p>Adresse mail<span style="color:red">*</span></p>
+        <input type="text" class="input" name="mail" id="mail">
+
+        <h3 class="mid">Payement</h3>
+
+        <div class="display">        
+
+            <div id="carte_Payement">
+                <div class="fle">
+                    <p class="grey">Total de la commande:</p>
+                    <p id="price">$prix + "€"</p>   
+                </div>
+                <h4>Carte de payement</h4>
+                    <img src="./assets/visa.jpg" class="card" alt=""></label>
+
+                    <img src="./assets/Master.jpg" class="card" alt=""></label>
+
+                    <img src="./assets/paypal.jpg" class="card" alt=""></label>
+
+                <div>
+                    <input type="radio" name="visa" id="visa" value="visa" class="radio"> Visa 
+                    <input type="radio" name="master" id="master" value="master" class="radio">Mastercard
+                    <input type="radio" name="paypal" id="paypal" value="paypal" class="radio"> Paypal
+                </div>
+                
+                <div id="num">
+                    <p>Payez avec votre carte bancaire.</p>
+                    <input type="text" class="input" name="carte" id="carte" placeholder="Numéro de carte                              MM / AA CVC   ">
+                    <p>Date d'expiration</p>
+                    <input type="text" class="expiration" id="expi" name="expiration" placeholder="Ex: 03/24">
+                    <p>Code au Verso de votre carte</p>
+                    <input type="text" class="verso" id="verso" name="verso" placeholder="Ex: 829">
+                </div>
+                <p>Vos informations personnelles peuvent être utilisées pour faire cette commande, pour améliorer votre expérience à travers ce site, et pour d'autre fonctionalitées décritent dans notre <span style="color:red"> politique de confidentialité.</span> </p>
+                <button id="payer">Payer</button>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <span>
+            <a href="mailto:delice@gmail.com">Nous contacter par mail</a>
+        </span>
+        <span>Copyright © workteam</span>
+        <span>07 54 76 34 21</span>
+    </footer>
+    <script src="./facturation.js"></script>
+</body>
+</html>
