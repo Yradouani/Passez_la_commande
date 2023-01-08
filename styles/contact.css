@@ -84,7 +84,7 @@
         flex-direction: row;
     }
     #h1_C{
-        color:rgb(16, 51, 51);
+        color:rgb(251, 161, 44);
     }
     .p_form{
         margin:0px;
@@ -177,5 +177,5 @@
     }
     
    body{
-      background-image: url(../assets/bg_header.jpg);
+    background-image: url(../assets/bg_header.jpg);
    }
