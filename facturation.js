@@ -1,32 +1,36 @@
  /* Info du local storage */
- 
+let storage = JSON.parse(localStorage.getItem("orderDishes"));
  /* Prénom */
-let firstName = document.querySelector("#firstName").value;
+let firstName = document.querySelector("#firstName");
  /* Nom */
-let lastName = document.querySelector("#lastName").value;
+let lastName = document.querySelector("#lastName");
  /* Nom de compagnie */
-let businessName = document.querySelector("#businessName").value;
+let businessName = document.querySelector("#businessName");
  /* Pays */
-let country = document.querySelector("#country").value;
+let country = document.querySelector("#country");
  /* Numero et nom de rue */
-let street = document.querySelector("#street").value;
+let street = document.querySelector("#street");
  /* Appartement */
-let apartment = document.querySelector("#apartment").value;
+let apartment = document.querySelector("#apartment");
  /* Code postal */
-let postal = document.querySelector("#postal").value;
+let postal = document.querySelector("#postal");
  /* Ville */
-let city = document.querySelector("#city").value;
+let city = document.querySelector("#city");
  /* Numéro de téléphone */
-let tel = document.querySelector("#tel").value;
+let tel = document.querySelector("#tel");
  /* Adresse mail */
-let mail = document.querySelector("#mail").value;
+let mail = document.querySelector("#mail");
+ /* Carte bancaire */
+let bankCardNo = document.querySelector("#carte");
+ /* Date d'expiration Carte bancaire */
+let expi = document.querySelector("#expi");
+ /* Numéro Verso carte bancaire */
+let verso = document.querySelector("#verso");
+
+ /* Prix total de la commande */
+ let total = document.querySelector("#price");
 
 
- /* La commande */
- let productName = document.querySelector("#productName");
- let sousTotal = document.querySelector("#sousTotal");
- let livraison = document.querySelector("#livraison");
- let total = document.querySelector("#total");
 
 
 
@@ -35,24 +39,20 @@ let err = document.querySelector("#error");
 let erreur = "";
 
 
-/* Vérif tel*/ 
-function verif_tel(tel) {
-    let taille = tel.length;
-    for(let i=0; i<taille; ++i) {
-        if ((tel.charAt(i) < "0") || (tel.charAt(i) > "9") || (taille!=10)){
-            erreur += '<p>Veuillez taper votre numéro de téléphone</p>';
-            err.style.display = "block"; 
-        }
-    }
-}
-
-
 function verif(){ 
 
     let valid = true;
 
- /* Vérif  firstname */
+    /* Vérif tel*/ 
+ let taille = tel.length;
+ for(let i=0; i<taille; ++i) {
+    if ((tel.charAt(i) < "0") || (tel.charAt(i) > "9") || (taille!=10)){
+        erreur += '<p>Veuillez taper votre numéro de téléphone</p>';
+        err.style.display = "block"; 
+    }
+ }
 
+    /* Vérif  firstname */
  if(firstName.length <= 0) { 
     erreur += '<p>Veuillez taper votre prénom!</p>';
     err.style.display = "block"; 
@@ -70,15 +70,37 @@ function verif(){
     erreur += '<p>Veuillez entrer votre adresse e-mail!</p>';
     err.style.display = "block"; 
     valid = false;
- } else if (email.indexOf('@') == -1) { 
+ } else if (mail.indexOf('@') == -1) { 
     erreur += '<p>Adresse e-mail incorrecte!</p>';
+    err.style.display = "block"; 
+    valid = false;
+ }
+ /* Vérif Carte bancaire */
+ if(bankCardNo.lenght != 16){
+    erreur += '<p>Numéro de carte banquaire incorrect!</p>';
+    err.style.display = "block"; 
+    valid = false;
+ }
+ /* Vérif Date d'expiration */
+ if(expi.lenght <= 0){
+    erreur += "<p>Numéro d'expiration incorrect!</p>";
+    err.style.display = "block"; 
+    valid = false;
+ }else if (expi.indexOf('/') == -1) { 
+    erreur += "<p>Numéro d'expiration incorrect!</p>";
+    err.style.display = "block"; 
+    valid = false;
+ }
+ /* Vérif Numéro Verso carte bancaire */
+ if(verso.lenght != 3){
+    erreur += "<p>Numéro au Verso incorrect!</p>";
     err.style.display = "block"; 
     valid = false;
  }
 
 
  if (valid) {
-    alert("Inscription Valide");
+    alert("Payement Complété, </br> les informations de la commande vous seront envoyées par mail.");
  }else {
      err.innerHTML = erreur;
  }
