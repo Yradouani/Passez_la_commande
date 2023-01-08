@@ -77,6 +77,9 @@ function quantity(i) {
     let btnCards = document.querySelectorAll(".flex");
     let isAlreadyInCart = false;
     // hasCalledUpdateQuantity = false;
+    // if (orderDishesId === []) {
+    //     btnCards[i].innerHTML = '<button class="btnCommander" name="btnCommander">Ajouter au panier</button>'
+    // }
     for (let k = 0; k < orderDishesId.length; k++) {
         // isAlreadyInCart = false;
         if (orderDishesId[k].id === menus[i].id) {
@@ -87,9 +90,6 @@ function quantity(i) {
                 </span><i class="fa-solid fa-plus plus"></i></td>
                 `
             if (!hasCalledUpdateQuantity) {
-                console.log(k, i)
-                let b = "toto"
-
                 var plusButtons = document.querySelectorAll(".plus");
                 var minusButtons = document.querySelectorAll(".minus");
                 var dishesQuantity = document.querySelectorAll(".quantity")
