@@ -46,8 +46,11 @@ main{
     /* background-color: #ffc8007a; */
     padding: 10px;
     
+    
   }
   
+
+
   #nav-gauche, #nav-droite{
     position: absolute;
     top: 50%;
@@ -59,3 +62,6 @@ main{
   #nav-droite{
     right: 0;
   }
+
+  
+  
