@@ -1,7 +1,6 @@
 body {
-    background: #E7A321;
-    padding: 20px;
     font-size: 19px;
+    margin: 0;
 }
 
 #commande_page {
@@ -13,7 +12,7 @@ body {
     padding: 30px;
 }
 
-h1 {
+h2 {
     text-align: center;
     margin-bottom: 60px;
 }
@@ -60,4 +59,13 @@ input[type="button"] {
 
 input[type="button"]:hover {
     background: #ffbb3c;
+}
+
+.trash {
+    cursor: pointer;
+}
+
+.quantity {
+    margin: 0 10px;
+    font-size: 20px;
 }

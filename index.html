@@ -15,9 +15,11 @@
 </head>
 
 <body>
-    <div id="home_page">
+    <img src="./assets/bg.jpg" alt="" id="bg">
+    <header>
         <nav>
-            <img src="./assets/logo.png" alt="logo" id="logo">
+            <!-- <img src="./assets/logo.png" alt="logo" id="logo"> -->
+            <h1>Les Délices</h1>
             <ul>
                 <li>
                     <a href="./index.html">Accueil</a>
@@ -29,37 +31,55 @@
                     <a href="./contact.html">Contact</a>
                 </li>
             </ul>
+            <i class="fa-solid fa-bars bar"></i>
         </nav>
-
-        <section id="dishes">
-            <h2>Nos Best Seller</h2>
-            <div id="best_seller"></div>
-
-            <h2>Nos boissons</h2>
-            <div id="drink">
+        <div id="header_text_content">
+            <div>
+                <p>Commandez en ligne et laissez-nous vous apporter<br /> vos plats savoureux directement à votre porte
+                </p>
+                <div id="btn_container">
+                    <button id="order">
+                        <a href="./recapitulatif.html">
+                            Commander
+                        </a>
+                    </button>
+                    <button id="best_seller_btn">
+                        <a href="#best_seller">Nos best Sellers</a></button>
+                </div>
             </div>
+        </div>
 
-            <h2>Nos entrées</h2>
-            <div id="starter">
-            </div>
+    </header>
 
-            <h2>Nos plats de résistance</h2>
-            <div id="main">
-            </div>
+    <section id="dishes">
+        <h2>Nos Best Seller</h2>
+        <div id="best_seller"></div>
 
-            <h2>Nos desserts</h2>
-            <div id="dessert">
-            </div>
+        <h2>Nos boissons</h2>
+        <div id="drink">
+        </div>
 
-        </section>
-        <footer>
-            <span>
-                <a href="mailto:delice@gmail.com">Nous contacter par mail</a>
-            </span>
-            <span>Copyright © workteam</span>
-            <span>07 54 76 34 21</span>
-        </footer>
-    </div>
+        <h2>Nos entrées</h2>
+        <div id="starter">
+        </div>
+
+        <h2>Nos plats de résistance</h2>
+        <div id="main">
+        </div>
+
+        <h2>Nos desserts</h2>
+        <div id="dessert">
+        </div>
+
+    </section>
+    <footer>
+        <span>
+            <a href="mailto:delice@gmail.com">Nous contacter par mail</a>
+        </span>
+        <span>Copyright © workteam</span>
+        <span>07 54 76 34 21</span>
+    </footer>
+
     <script src="./home.js" type="module"></script>
 </body>
 

@@ -15,67 +15,54 @@
 </head>
 
 <body>
-    <div id="commande_page">
-        <nav>
-            <img src="./assets/logo.png" alt="logo" id="logo">
-            <ul>
-                <li>
-                    <a href="./index.html">Accueil</a>
-                </li>
-                <li>
-                    <a href="./recapitulatif.html">Ma commande</a>
-                </li>
-                <li>
-                    <a href="./contact.html">Contact</a>
-                </li>
-            </ul>
-        </nav>
-        <div class="recap_content">
-            <h1>Récapitulatif de votre commande</h1>
-            <hr>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nom du plat</th>
-                        <th>Quantité</th>
-                        <th>Prix unitaire</th>
-                        <th>Prix total</th>
-                    </tr>
-                </thead>
+    <nav>
+        <h1>Les Délices</h1>
+        <ul>
+            <li>
+                <a href="./index.html">Accueil</a>
+            </li>
+            <li>
+                <a href="./recapitulatif.html">Ma commande</a>
+            </li>
+            <li>
+                <a href="./contact.html">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="recap_content">
+        <h2>Récapitulatif de votre commande</h2>
+        <hr>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom du plat</th>
+                    <th>Quantité</th>
+                    <th>Prix unitaire</th>
+                    <th>Prix total</th>
+                </tr>
+            </thead>
 
-                <tbody>
-                    <tr>
-                        <td>Pizza</td>
-                        <td>2</td>
-                        <td>9.99 €</td>
-                        <td>19.98€</td>
-                    </tr>
-                </tbody>
-            </table>
-            <hr>
-            <div id="paiement" class="contact">Moyen de paiement : </div>
-            <div id="total" class="contact">Total : </div>
+            <tbody>
 
-            <h2>Récapitulatif de vos coordonnées</h2>
-            <div class="contact">Nom : </div>
-            <div class="contact">Prénom : </div>
-            <div class="contact">Numéro de téléphone : </div>
-            <div class="contact">Adresse : </div>
+            </tbody>
+        </table>
+        <hr>
+        <div id="total" class="contact"></div>
 
-            <div class="validate">
-                <input type="button" value="Valider la commande">
-            </div>
-
+        <div class="validate">
+            <input type="button" value="Valider la commande">
         </div>
-        <footer>
-            <span>
-                <a href="mailto:delice@gmail.com">Nous contacter par mail</a>
-            </span>
-            <span>Copyright © workteam</span>
-            <span>07 54 76 34 21</span>
-        </footer>
+
     </div>
-    <script src="./recapitulatif.js"></script>
+    <footer>
+        <span>
+            <a href="mailto:delice@gmail.com">Nous contacter par mail</a>
+        </span>
+        <span>Copyright © workteam</span>
+        <span>07 54 76 34 21</span>
+    </footer>
+
+    <script src="./recapitulatif.js" type="module"></script>
 </body>
 
 </html>
