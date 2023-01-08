@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="./styles/home.css">
     <link rel="stylesheet" href="./styles/navbar.css">
     <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/slider.css">
+
     <title>Passez la commande</title>
 </head>
 
@@ -55,6 +59,58 @@
         <h2>Nos Best Seller</h2>
         <div id="best_seller"></div>
 
+        <!-- **********LE SLIDER********* -->
+
+        <main>
+            <div class="diapo" data-speed="2000" data-transition="700">
+                <div class="elements">
+                    <div class="element">
+                        <img src="./assets/pancakes.jpg" alt="pancakes">
+
+                        <div class="caption">
+                            <h2>Pancakes aux framboises</h2>
+                            <p>Crêpes épaisses et moelleuses, cuites à la poêle, garnies de sucre, de beurre et de sirop
+                                d'érable, recouvertes de framboises fraiches</p>
+                        </div>
+                    </div>
+                    <div class="element">
+                        <img src="./assets/plate.jpg" alt="pizza">
+                        <div class="caption">
+                            <h2>Pizza aux anchois</h2>
+                            <p>Composée d'un disque de pâte à pizza croustillant et doré, recouvert de tomates pelées et
+                                coupées en rondelles, de fromage fondu et de fines tranches d'anchois.</p>
+                        </div>
+                    </div>
+                    <div class="element">
+                        <img src="./assets/nachos.jpg" alt="nachos">
+                        <div class="caption">
+                            <h2>Trempette à nachos</h2>
+                            <p>Chips de maïs croustillantes recouvertes de fromage fondu et de diverses garnitures,
+                                comme de la viande hachée, des haricots, des tomates, des oignons, des poivrons, du
+                                guacamole et de la crème sure.</p>
+                        </div>
+                    </div>
+                    <div class="element">
+                        <img src="./assets/cake.jpg" alt="cake">
+                        <div class="caption">
+                            <h2>Tiramisu</h2>
+                            <p>Découvrez ce formidable dessert italien composé de biscuits roulés dans un café tradition
+                                de haute qualité, recouvert d'une crème onctueuse et légèrement sucrée</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Flèches -->
+                <i id="nav-gauche" class="las la-chevron-left"></i>
+                <i id="nav-droite" class="las la-chevron-right"></i>
+
+
+            </div>
+
+        </main>
+
+        <!-- FIN DE SLIDER -->
+
         <h2>Nos boissons</h2>
         <div id="drink">
         </div>
@@ -81,6 +137,7 @@
     </footer>
 
     <script src="./home.js" type="module"></script>
+    <script src="./slider.js"></script>
 </body>
 
 </html>
