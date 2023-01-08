@@ -12,6 +12,7 @@ function display() {
         for (let j = 0; j < menus.length; j++) {
             if (dishId === menus[j].id) {
                 totalPriceOfOneDishe = parseFloat((orderDishes[i].quantity) * (menus[j].price));
+                totalPriceOfOneDishe = Math.round(totalPriceOfOneDishe * 100) / 100
                 tableContent.innerHTML += `
                     <tr>
                         <td>${menus[j].name}</td>

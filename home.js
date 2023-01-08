@@ -50,12 +50,12 @@ function order() {
     for (let i = 0; i < orderButtons.length; i++) {
         let dishesId = menus[i].id;
         quantity(i);
-
+        let isAlreadyInCart = false;
         if (orderButtons[i]) {
             orderButtons[i].addEventListener("click", () => {
 
                 let DishesInLocalStorage = JSON.parse(localStorage.getItem("orderDishes"));
-                let isAlreadyInCart = false;
+
                 if (DishesInLocalStorage) {
                     console.log("Il y a déjà des articles dans le panier")
                     isAlreadyInCart = false;
@@ -89,14 +89,12 @@ function order() {
     }
 }
 
-let dishesQuantity = document.querySelectorAll(".quantity")
-
 function quantity(i) {
     let btnCards = document.querySelectorAll(".flex");
     let isAlreadyInCart = false;
     // hasCalledUpdateQuantity = false;
     for (let k = 0; k < orderDishesId.length; k++) {
-        isAlreadyInCart = false;
+        // isAlreadyInCart = false;
         if (orderDishesId[k].id === menus[i].id) {
             console.log("j'ai déjà été ajouté au panier")
             btnCards[i].innerHTML = `
@@ -104,13 +102,12 @@ function quantity(i) {
                     ${orderDishesId[k].quantity} 
                 </span><i class="fa-solid fa-plus plus"></i></td>
                 `
-
             if (hasCalledUpdateQuantity) {
                 return;
             }
             updateQuantity()
             hasCalledUpdateQuantity = true
-        } else {
+            isAlreadyInCart = true;
         }
     }
     if (!isAlreadyInCart) {
@@ -123,14 +120,17 @@ function updateQuantity() {
     let minusButtons = document.querySelectorAll(".minus");
     let dishesQuantity = document.querySelectorAll(".quantity")
 
+
     for (let i = 0; i < plusButtons.length; i++) {
         let dishesId = menus[i].id;
 
         plusButtons[i].addEventListener("click", () => {
+            console.log(plusButtons)
             for (let j = 0; j < orderDishesId.length; j++) {
                 let quantity = orderDishesId[j].quantity;
 
                 if (orderDishesId[j].id === dishesId) {
+                    console.log("j'ajoute 1 à la quantité")
                     orderDishesId[j].quantity += 1;
                     localStorage.setItem("orderDishes", JSON.stringify(orderDishesId))
                     dishesQuantity[i].innerHTML = (quantity + 1)
@@ -167,6 +167,9 @@ function updateQuantity() {
 }
 order()
 updateQuantity()
+// for (let i = 0; i < orderButtons.length; i++) {
+//     quantity(i);
+// }
 
 
 
