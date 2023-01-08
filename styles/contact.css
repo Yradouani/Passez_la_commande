@@ -9,11 +9,7 @@
     }
 
    
-    
-    
-  
-
-
+   
     @keyframes slidy {
       0% { left: 0%; }
       20% { left: 0%; }
@@ -37,7 +33,8 @@
       animation: 20s slidy infinite ease-in-out;
       -webkit-animation: 20s slidy infinite ease-in-out;
     }
-    /*fin slider*/
+   
+   
     /*articles.html*/
     
     #A_Body_flex
@@ -84,8 +81,9 @@
         flex-direction: row;
     }
     #h1_C{
-        color:rgb(251, 161, 44);
-    }
+        color:rgba(255, 217, 0, 0.727);
+        font-family: 'Varela Round', sans-serif;
+    }  
     .p_form{
         margin:0px;
         padding:0px;
@@ -104,6 +102,8 @@
     }
     #F_map{
         width: 30%;
+        color: rgb(49, 49, 49);
+        font-family: 'Varela Round', sans-serif;
     }
     form{
         display: flex;
@@ -163,10 +163,11 @@
 
 
     #MonBouton {
-        width: 12vw;
-        color: #fff;
-        background-color: rgb(251, 103, 44);
+        width: 13vw;
+        color: rgb(91, 91, 91);
+        background-color: rgba(255, 213, 0, 0.715);
         border: none;
+        border-radius: 20px;
         font-size: 16px;
         font-weight: bold;
         cursor: pointer;
@@ -179,3 +180,18 @@
    body{
     background-image: url(../assets/bg_header.jpg);
    }
+
+   nav li a{
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+}
+
+#message{
+    color:rgb(49, 49, 49);
+    font-family: 'Varela Round', sans-serif;
+}
+
+/* nav li a:hover{
+    color:gold;
+    border-bottom: 2px solid gold;
+} */

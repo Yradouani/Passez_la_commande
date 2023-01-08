@@ -9,6 +9,11 @@ nav {
     background-image: url(../assets/bg_header.jpg);
 }
 
+nav li a:hover{
+    color:gold;
+    border-bottom: 2px solid gold;
+}
+
 h1 {
     font-family: 'Yeon Sung', cursive;
     font-size: 50px;
@@ -41,4 +46,18 @@ li {
     nav {
         height: 130px;
     }
+}
+
+
+
+header h1{
+	animation:rainbow 5s linear alternate infinite;
+}
+
+@keyframes rainbow{
+	0%{ color:red }
+	25%{ color:gold }
+	50%{ color:yellow }
+	75%{ color:rgb(251, 161, 44) }
+	100%{ color:gold}
 }
