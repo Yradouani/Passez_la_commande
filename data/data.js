@@ -1,16 +1,16 @@
 export const menus = [
     {
-        id: 1,
+        id: 0,
         name: 'Jus d\'orange',
         picture: './assets/jus.jpeg',
         type: 'drink',
         isLiked: false,
         isBestSeller: false,
-        description: 'Jus d’orange pressé fait maison avec des oranges espagnoles, bios et juteuses.',
+        description: 'Jus d’orange pressé fait maison avec des oranges espagnoles, bio et juteuses.',
         price: '3.99'
     },
     {
-        id: 2,
+        id: 1,
         name: 'Smoothie',
         picture: './assets/smoothie.jpg',
         type: 'drink',
@@ -20,7 +20,7 @@ export const menus = [
         price: '4.99'
     },
     {
-        id: 3,
+        id: 2,
         name: 'Chocolat chaud',
         picture: './assets/chocolate.jpg',
         type: 'drink',
@@ -30,7 +30,7 @@ export const menus = [
         price: '3.99'
     },
     {
-        id: 4,
+        id: 3,
         name: 'Salade de crudités',
         picture: './assets/salade.jpg',
         type: 'starter',
@@ -40,7 +40,7 @@ export const menus = [
         price: '5.99',
     },
     {
-        id: 5,
+        id: 4,
         name: 'Pain de viande',
         picture: './assets/Pain.jpg',
         type: 'starter',
@@ -50,7 +50,7 @@ export const menus = [
         price: '4.99'
     },
     {
-        id: 6,
+        id: 5,
         name: 'Trempette à nachos',
         picture: './assets/nachos.jpg',
         type: 'starter',
@@ -60,7 +60,7 @@ export const menus = [
         price: '4.99'
     },
     {
-        id: 7,
+        id: 6,
         name: 'Paëlla',
         picture: './assets/rice-dish.jpg',
         type: 'main',
@@ -70,7 +70,7 @@ export const menus = [
         price: '9.99'
     },
     {
-        id: 8,
+        id: 7,
         name: 'Hamburger maison',
         picture: './assets/burgers.jpg',
         type: 'main',
@@ -80,7 +80,7 @@ export const menus = [
         price: '9.99'
     },
     {
-        id: 9,
+        id: 8,
         name: 'Pizza aux anchois',
         picture: './assets/plate.jpg',
         type: 'main',
@@ -90,7 +90,7 @@ export const menus = [
         price: '8.99'
     },
     {
-        id: 10,
+        id: 9,
         name: 'Tiramisu',
         picture: './assets/cake.jpg',
         type: 'dessert',
@@ -100,7 +100,7 @@ export const menus = [
         price: '6.99'
     },
     {
-        id: 11,
+        id: 10,
         name: 'Crème brulée',
         picture: './assets/creme-brulee.jpg',
         type: 'dessert',
@@ -110,7 +110,7 @@ export const menus = [
         price: '7.99'
     },
     {
-        id: 12,
+        id: 11,
         name: 'Pancakes aux framboises',
         picture: './assets/pancakes.jpg',
         type: 'dessert',

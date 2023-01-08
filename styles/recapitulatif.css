@@ -64,3 +64,8 @@ input[type="button"]:hover {
 .trash {
     cursor: pointer;
 }
+
+.quantity {
+    margin: 0 10px;
+    font-size: 20px;
+}

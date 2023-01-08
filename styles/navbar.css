@@ -13,6 +13,8 @@ h1 {
     font-family: 'Yeon Sung', cursive;
     font-size: 50px;
     margin-left: 50px;
+    display: flex;
+    align-items: center;
 }
 
 ul {
@@ -34,3 +36,9 @@ li {
     font-family: 'Varela Round', sans-serif;
 }
 
+@media (max-width: 890px) {
+
+    nav {
+        height: 130px;
+    }
+}
