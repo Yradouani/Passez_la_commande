@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap');
 
 nav {
     display: flex;
@@ -9,12 +10,19 @@ nav {
     background-image: url(../assets/bg_header.jpg);
 }
 
+nav li a:hover{
+    color:gold;
+    border-bottom: 2px solid gold;
+}
+
 h1 {
-    font-family: 'Yeon Sung', cursive;
-    font-size: 50px;
+    /* font-family: 'Yeon Sung', cursive; */
+    font-family: 'Passions Conflict', cursive;
+    font-size: 90px;
     margin-left: 50px;
     display: flex;
     align-items: center;
+
 }
 
 ul {
@@ -41,4 +49,18 @@ li {
     nav {
         height: 130px;
     }
+}
+
+
+
+nav h1{
+	animation:rainbow 5s linear alternate infinite;
+}
+
+@keyframes rainbow{
+	0%{ color:red }
+	25%{ color:gold }
+	50%{ color:yellow }
+	75%{ color:rgb(251, 161, 44) }
+	100%{ color:gold}
 }
