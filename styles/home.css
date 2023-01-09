@@ -133,9 +133,8 @@ h3 {
 }
 
 .description {
-    border: 1px solid rgb(251, 161, 44);
     border-radius: 0.5em;
-    font-size: 15px;
+    font-size: 17px;
     padding: 10px;
 }
 
