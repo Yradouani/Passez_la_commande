@@ -1,0 +1,98 @@
+
+nav, footer{
+    width: 100%;
+    background: white;
+}
+body{
+    margin: 0;
+}
+
+h3{
+    color: rgb(241, 113, 45);
+}
+#facturation_page{
+    padding: 3%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.name, .display{
+    display: flex;
+    justify-content: space-around;
+}
+p{
+
+    font-size: small;
+    color: gray;
+    font-weight: bold;
+}
+.input{
+    width: 25em;
+    height: 2em;
+    margin: 1vw;
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+}
+#num{
+    background-color: white;
+    padding: 5%;
+    border-radius: 0.5em;
+}
+#carte_Payement{
+background-color: aliceblue;
+width: 25em;
+padding: 2%;
+margin-left: 2%;
+border-radius: 0.5em;
+}
+#payer{
+    border: none;
+    background-color: rgb(203, 35, 35);
+    color: white;
+    border-radius: 0.8em;
+    margin-left: 38%;
+    padding: 2%;
+    width: 20%;
+}
+#payer:hover{
+    scale: 1.05;
+    background-color: rgb(238, 44, 44);
+}
+.card{
+    width: 12%;
+    margin: 2% 4.5%;
+}
+.radio{
+    margin: 2%;
+}
+.mid{
+    margin-left: 48%;
+}
+.fle{
+    display: flex;
+}
+.grey{
+    background-color: gainsboro;
+    width: 32%;
+    border: 1px solid gainsboro;
+    border-radius: 0.3em;
+    padding: 2%;
+}
+#price{
+    width: 32%;
+    padding: 2%;
+}
+.expiration, .verso{
+    width: 14%;
+}
+/*Vérification*/
+
+#error {
+    color: red;
+    border: 1px solid red;
+    padding-left: 10px;
+    display: none;
+}
