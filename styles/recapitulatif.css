@@ -69,3 +69,22 @@ input[type="button"]:hover {
     margin: 0 10px;
     font-size: 20px;
 }
+
+@media (max-width: 600px) {
+    .recap_content {
+        padding: 20px;
+    }
+    .quantity {
+        margin: 0 7px;
+        font-size: 17px;
+    }
+
+    table {
+        font-size: 17px;
+    }
+}
+@media (max-width: 500px){
+    .recap_content {
+        padding: 10px;
+    }
+}
