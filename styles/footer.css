@@ -10,4 +10,35 @@ footer {
 
 footer span {
     margin: 30px;
+    font-size: 20px;
+    font-family: 'Varela Round', sans-serif;
 }
+
+footer span:hover{
+    color:gold;
+    border-bottom: 2px solid gold;
+}
+
+footer a:hover{
+    color:gold;
+    border-bottom: 2px solid gold;
+}
+
+
+/**********FOOTER ANIMATION**********/
+
+
+
+
+footer span{
+	animation:rainbow 5s linear alternate infinite;
+}
+
+@keyframes rainbow{
+	0%{ color:red }
+	25%{ color:gold }
+	50%{ color:yellow }
+	75%{ color:rgb(251, 161, 44) }
+	100%{ color:gold}
+}
+

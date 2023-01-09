@@ -118,7 +118,7 @@ h3 {
 }
 
 .heart:hover {
-    background: linear-gradient(#9356DC, #FF79DA);
+    background: linear-gradient(gold, #ff6c04);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
